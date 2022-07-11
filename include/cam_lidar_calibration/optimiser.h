@@ -7,7 +7,12 @@
 #include <string>
 #include <math.h>
 
-#include <opencv/cv.hpp>
+#include "opencv2/opencv.hpp"
+#include "opencv2/core.hpp"
+#include "opencv2/highgui/highgui.hpp"
+#include "opencv2/calib3d/calib3d.hpp"
+#include "opencv2/features2d/features2d.hpp"
+
 #include <ros/ros.h>
 
 #include "cam_lidar_calibration/load_params.h"
@@ -33,6 +38,7 @@ namespace cam_lidar_calibration
 
             cv::Mat R_x = (Mat_<double>(3, 3) << 1, 0, 0, 0, cos(roll), -sin(roll), 0, sin(roll), cos(roll));
             // Calculate rotation about y axis
+
             cv::Mat R_y = (Mat_<double>(3, 3) << cos(pitch), 0, sin(pitch), 0, 1, 0, -sin(pitch), 0, cos(pitch));
 
             // Calculate rotation about z axis
