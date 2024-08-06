@@ -1,26 +1,26 @@
 # Topics
-camera_topic: "/gmsl/A0/image_color"
-camera_info: "/gmsl/A0/camera_info"
-lidar_topic: "/velodyne/front/points"
+camera_topic: "/usb_cam/image_raw"
+camera_info: "/usb_cam/camera_info"
+lidar_topic: "/ouster/points"
 
 # Dynamic rqt_reconfigure default bounds
 feature_extraction:
-  x_min: -10.0
-  x_max: 10.0
-  y_min: -8.0
-  y_max: 8.0
-  z_min: -5.0
+  x_min: 0.7
+  x_max: 3
+  y_min: 0
+  y_max: 3
+  z_min: -0.6
   z_max: 5.0
   
 # Properties of chessboard calibration target
 chessboard:
   pattern_size:
-    height: 7
-    width: 5  
-  square_length: 95
+    height: 10
+    width: 7
+  square_length: 60
   board_dimension:
-    width: 610
-    height: 850
+    width: 603.25 
+    height: 806.45
   translation_error:
-    x: 2
+    x: 0
     y: 0
